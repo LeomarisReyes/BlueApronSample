@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BlueApronSample.Views.DataDeliverPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+  <StackLayout BackgroundColor="#f7f8fa" Padding="30"> 
+         <Label Text="&lt;      Where shoud we deliver?" Margin="0,0,0,15" HorizontalOptions="FillAndExpand" TextColor="#16346a" Font="Bold,15" />
+   <Grid>
+     <Grid.RowDefinitions> 
+         <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />  
+         <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />
+     </Grid.RowDefinitions>
+
+     <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />  
+          <ColumnDefinition Width="*" />
+     </Grid.ColumnDefinitions>
+
+        <Label Text="First name" Grid.Row="0" Grid.Column="0" Style="{StaticResource HeaderDataDeliver}"/>
+        <Entry Grid.Row="1" Grid.Column="0" />
+
+        <Label Text="Last name" Grid.Row="0" Grid.Column="1" Style="{StaticResource HeaderDataDeliver}"/>
+        <Entry Grid.Row="1" Grid.Column="1" />
+
+        <Label Text="Adress" Grid.Row="2" Grid.Column="0" Style="{StaticResource HeaderDataDeliver}"/>
+        <Entry Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
+
+        <Label Text="Apt/Suite/Floor#" Grid.Row="4" Grid.Column="0" Style="{StaticResource HeaderDataDeliver}"/>
+        <Entry Grid.Row="5" Grid.Column="0" />
+
+        <Label Text="Zip" Grid.Row="4" Grid.Column="1" Style="{StaticResource HeaderDataDeliver}"/>
+        <Entry Grid.Row="5" Grid.Column="1" />
+
+        <Label Text="City" Grid.Row="6" Grid.Column="0" Style="{StaticResource HeaderDataDeliver}"/>
+        <Entry Grid.Row="7" Grid.Column="0" />
+
+        <Label Text="State" Grid.Row="6" Grid.Column="1" Style="{StaticResource HeaderDataDeliver}"/>
+        <Picker Grid.Row="7" Grid.Column="1" Title="Select a state">
+            <Picker.Items>
+                <x:String>North Carolina</x:String>
+                <x:String>New Jersey</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Phone number" Grid.Row="8" Grid.Column="0" Style="{StaticResource HeaderDataDeliver}"/>
+        <Entry Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" />
+
+        <Label Text="Special Instructions (Optional)" Grid.Row="10" Grid.Column="0"  Grid.ColumnSpan="2" Style="{StaticResource HeaderDataDeliver}"/>
+        <Entry Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="e.g. Please leave with front office" />
+  </Grid>
+        <Button Text="Continue"  BackgroundColor="#16346a" TextColor="White" VerticalOptions="EndAndExpand" Font="Bold,15"/>     
+
+</StackLayout>
+</ContentPage>

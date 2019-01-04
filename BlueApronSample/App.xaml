@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BlueApronSample.App">
+    <Application.Resources>
+        <ResourceDictionary>
+           <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property = "TextColor"       Value="#16346a" />
+                <Setter Property = "FontSize"        Value="15" />
+                <Setter Property = "FontAttributes"  Value="Bold" />
+                <Setter Property = "Margin"          Value="20,13,10,0" />
+            </Style>
+
+            <Style x:Key="HeaderDataDeliver" TargetType="Label">
+                <Setter Property = "TextColor"       Value="#16346a" />
+                <Setter Property = "Font"            Value="Bold,15" />
+            </Style>
+
+            <Style x:Key="SilverLabels" TargetType="Label">
+                <Setter Property = "TextColor"       Value="#767877" />
+                <Setter Property = "FontSize"        Value="14" />
+                <Setter Property = "Margin"        Value="0,10,0,10" />  
+            </Style>
+
+              <Style x:Key="AmountsLabels" TargetType="Label">
+                <Setter Property = "TextColor"       Value="#4c4c4c" />
+                <Setter Property = "FontSize"        Value="14" />
+                <Setter Property = "HorizontalOptions" Value="End" /> 
+               <Setter Property = "VerticalOptions"    Value="Center" /> 
+            </Style>
+
+             <Style x:Key="TitlePlanLabels" TargetType="Label">
+                <Setter Property = "Margin"            Value="0,10,0,0" />
+                <Setter Property = "Font"              Value="Bold,17" />
+                <Setter Property = "HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property = "TextColor"         Value="#274374" />
+            </Style>
+       </ResourceDictionary>     
+    </Application.Resources>
+</Application>

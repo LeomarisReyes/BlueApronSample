@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BlueApronSample.Views.PrincipalPage">
+    <ContentPage.Content>
+        <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                 <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Image Source="Food" Grid.Row="0" VerticalOptions="StartAndExpand" />
+            <Label Grid.Row="1" Text="Dinner, the Blue Apron way" Margin="0,25,0,0" HorizontalOptions="CenterAndExpand" TextColor="#16346a" Font="Bold,14"/>
+            <Image Source="Cartoon"  Grid.Row="1" Margin="0,55,0,0"  HorizontalOptions="CenterAndExpand"/>
+            <Label Grid.Row="2" Text="Our chefs and farmers work together" HorizontalOptions="CenterAndExpand" TextColor="#7880a2" FontSize="13"/>
+            <Label Grid.Row="3" Text="To make food more sustainable and recipes more delicious." HorizontalOptions="CenterAndExpand" TextColor="Silver" FontSize="12"/>
+            <Image Grid.Row="4" Source="Dinner2" Margin="0,30,0,0"/>
+        </Grid> 
+
+      </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BlueApronSample.Views.ProfilePage" 
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             Title="Profile">
+    
+    <ContentPage.Content>
+     <ScrollView BackgroundColor="#f7f8fa"> 
+              <!--<StackLayout HeightRequest="150" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                 <Image Source="Camera" HeightRequest="70" WidthRequest="70" />
+                 <Label Text="Start Snapping" Style="{StaticResource LabelStyle}" HorizontalOptions="CenterAndExpand"/> 
+                 <Label Text="Channel your inner food photographer" FontSize="13" HorizontalOptions="CenterAndExpand" TextColor="Silver"/> 
+             </StackLayout> -->
+            <TableView Intent="Menu">
+                <TableRoot>
+                     <TableSection Title="MY FOOD PICS">
+                       <ViewCell>  
+                        <StackLayout HeightRequest="150" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                 <Image Source="Camera" HeightRequest="70" WidthRequest="70" />
+                 <Label Text="Start Snapping" Style="{StaticResource LabelStyle}" HorizontalOptions="CenterAndExpand"/> 
+                 <Label Text="Channel your inner food photographer" FontSize="13" HorizontalOptions="CenterAndExpand" TextColor="Silver"/> 
+             </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                     <TableSection>
+                        <ViewCell > 
+                          <StackLayout Orientation="Horizontal">
+                              <Label Text="Saved Recipes" Style="{StaticResource LabelStyle}" />  
+                              <Image Source="Arrow" HeightRequest="34" WidthRequest="34"  HorizontalOptions="EndAndExpand"/> 
+                          </StackLayout>
+                        </ViewCell>
+                         <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                           <Label Text="Manage Push Notifications" Style="{StaticResource LabelStyle}" /> 
+                               <Image Source="Arrow" HeightRequest="34" WidthRequest="34"  HorizontalOptions="EndAndExpand"/> 
+                          </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection Title="Blue Apron">  
+                        <ViewCell> 
+                           <StackLayout Orientation="Horizontal">
+                              <Label Text="Report Order Issue" Style="{StaticResource LabelStyle}" />
+                              <Image Source="Arrow" HeightRequest="34" WidthRequest="34"  HorizontalOptions="EndAndExpand"/> 
+                          </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                             <StackLayout Orientation="Horizontal">
+                                 <Label Text="Freshness Guarantee" Style="{StaticResource LabelStyle}" />
+                                 <Image Source="Arrow" HeightRequest="34" WidthRequest="34"  HorizontalOptions="EndAndExpand"/> 
+                          </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                          <StackLayout Orientation="Horizontal">
+                             <Label Text="Contact &amp; FAC" Style="{StaticResource LabelStyle}" />
+                             <Image Source="Arrow" HeightRequest="34" WidthRequest="34"  HorizontalOptions="EndAndExpand"/> 
+                          </StackLayout>
+                        </ViewCell> 
+                         <ViewCell>
+                          <StackLayout Orientation="Horizontal">
+                             <Label Text="Rate This App" Style="{StaticResource LabelStyle}" />
+                             <Image Source="Arrow" HeightRequest="34" WidthRequest="34"  HorizontalOptions="EndAndExpand"/> 
+                          </StackLayout>
+                        </ViewCell> 
+                         <ViewCell>
+                           <StackLayout Orientation="Horizontal">
+                             <Label Text="Send App FeedBack" Style="{StaticResource LabelStyle}" />
+                             <Image Source="Arrow" HeightRequest="34" WidthRequest="34"  HorizontalOptions="EndAndExpand"/> 
+                          </StackLayout>
+                        </ViewCell> 
+                         <ViewCell>
+                          <StackLayout Orientation="Horizontal">
+                             <Label Text="Acknowledgements" Style="{StaticResource LabelStyle}"/>
+                             <Image Source="Arrow" HeightRequest="34" WidthRequest="34"  HorizontalOptions="EndAndExpand"/> 
+                          </StackLayout>
+                        </ViewCell>  
+                    </TableSection>
+                </TableRoot>
+            </TableView>  
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

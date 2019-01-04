@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BlueApronSample.Views.ServingPage" 
+             xmlns:local="clr-namespace:BlueApronSample" 
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+    <ContentPage.BindingContext>
+        <local:ViewModels.ServingViewModel />
+    </ContentPage.BindingContext>
+
+  <ContentPage.Content>
+  <ScrollView>
+  <StackLayout BackgroundColor="#f7f8fa" Padding="20,20,20,10"> 
+       <Image Source="Family" HorizontalOptions="FillAndExpand" WidthRequest="650"/>    
+
+         <Grid BackgroundColor="White" Padding="10,10,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"  />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+               </Grid.ColumnDefinitions>
+               <Image x:Name="imgCircle1" Grid.Row="0" Grid.Column="0" Source="Circle" HeightRequest="5" WidthRequest="5">
+                  <Image.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Tapped="Circle1_Tapped"
+                            Command="{Binding ChangeVisibiliyCommand}"/>
+                       </Image.GestureRecognizers>
+                  </Image>
+                  <Label Grid.Row="0" Grid.Column="1">
+                   <Label.FormattedText>
+                        <FormattedString>
+                           <Span x:Name="Time1" Text="2 times&#10;" FontSize="13" Font="Bold,13" ForegroundColor="#33507b" />
+                           <Span Text="$8.99 a serving&#10;" FontSize="13" />
+                           <Span Text="Free Shipping&#10;" ForegroundColor="#ee7f57" Font="Bold,13"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                 </Label>
+
+                  <Image x:Name="imgCircle2" Grid.Row="0" Grid.Column="2" Source="Circle" HeightRequest="10" WidthRequest="10">
+                  <Image.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                             Tapped="Circle2_Tapped"
+                            Command="{Binding ChangeVisibiliyCommand}"/>
+                       </Image.GestureRecognizers>
+                  </Image>
+                  <Label Grid.Row="0" Grid.Column="3">
+                   <Label.FormattedText>
+                        <FormattedString>
+                           <Span x:Name="Time2" Text="3 times&#10;" FontSize="13" Font="Bold,13" ForegroundColor="#33507b" />
+                           <Span Text="$7.99 a serving&#10;" FontSize="13" />
+                           <Span Text="Free Shipping&#10;" ForegroundColor="#ee7f57" Font="Bold,13"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                 </Label>
+                 <BoxView Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver"/>
+                  <Image x:Name="imgCircle3" Grid.Row="2" Grid.Column="0" Source="Circle" HeightRequest="23" WidthRequest="23">
+                  <Image.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                             Tapped="Circle3_Tapped"
+                            Command="{Binding ChangeVisibiliyCommand}"/>
+                       </Image.GestureRecognizers>
+                  </Image>
+                  <Label Grid.Row="2" Grid.Column="1">
+                   <Label.FormattedText>
+                        <FormattedString>
+                           <Span x:Name="Time3" Text="4 times&#10;" FontSize="13" Font="Bold,13" ForegroundColor="#33507b" />
+                           <Span Text="$7.49 a serving&#10;" FontSize="13" />
+                           <Span Text="Free Shipping&#10;" ForegroundColor="#ee7f57" Font="Bold,13"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                 </Label>
+                 <BoxView Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver"/>
+               
+                </Grid>  
+                  <Grid IsVisible="{Binding IsVisible}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+               </Grid.ColumnDefinitions>
+           
+             <Label Text="Recurring Weekly Total" Grid.Row="0" Grid.Column="0" Style="{StaticResource SilverLabels}" />
+             <Label Text="$119.84" Grid.Row="0" Grid.Column="1" Style="{StaticResource AmountsLabels}" />
+             <Label Text="Tax" Grid.Row="1" Grid.Column="0" Style="{StaticResource SilverLabels}" />
+             <Label Text="$0.00"  Grid.Row="1" Grid.Column="1" Style="{StaticResource AmountsLabels}"  />
+             <Label Text="Shipping" Grid.Row="2" Grid.Column="0" Style="{StaticResource SilverLabels}" />  
+             <Label Text="FREE"  Grid.Row="2" Grid.Column="1" Style="{StaticResource AmountsLabels}"  />
+             <Label Text="First Week Total" Grid.Row="3" Grid.Column="0" Style="{StaticResource SilverLabels}"  />   
+             <Label Text="$119.84"  Grid.Row="3" Grid.Column="1" Style="{StaticResource AmountsLabels}" />
+             <Button Text="Continue"  Grid.Row="4" Grid.Column="0"  Grid.ColumnSpan="2" BackgroundColor="#16346a" TextColor="White" VerticalOptions="EndAndExpand" Font="Bold,15"/>  
+           </Grid> 
+                    
+  </StackLayout>
+  </ScrollView>
+</ContentPage.Content>
+</ContentPage>

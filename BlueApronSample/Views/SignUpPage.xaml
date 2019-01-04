@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BlueApronSample.Views.SignUpPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+    <ContentPage.Content>
+    <Grid Padding="13,50,13,0">
+         <Grid.RowDefinitions> 
+             <RowDefinition Height="Auto" />
+             <RowDefinition Height="Auto" />
+             <RowDefinition Height="Auto" />
+             <RowDefinition Height="Auto" />
+             <RowDefinition Height="Auto" />
+             <RowDefinition Height="Auto" />
+             <RowDefinition Height="Auto" />
+             <RowDefinition Height="Auto" />  
+             <RowDefinition Height="Auto" />
+         </Grid.RowDefinitions>
+
+         <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />  
+              <ColumnDefinition Width="Auto" />
+             <ColumnDefinition Width="*" />
+         </Grid.ColumnDefinitions>
+
+         <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Source="PrincipalIcon" HorizontalOptions="CenterAndExpand"/>
+         <Entry Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Placeholder="Email"    HeightRequest="50" />
+         <Entry Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Placeholder="Password" HeightRequest="50"/>
+         <Entry Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Placeholder="ZIP Code" HeightRequest="50"/> 
+         <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Text="Sign Up" Font="Bold,15" BackgroundColor="#16346a" TextColor="White"/>  
+         <BoxView Grid.Row="5" Grid.Column="0" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" VerticalOptions="Center"/>
+         <Label Grid.Row="5" Grid.Column="1" Text="or" HorizontalTextAlignment="Center" TextColor="Silver" FontSize="11"/>
+         <BoxView Grid.Row="5" Grid.Column="2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" VerticalOptions="Center"/>
+         <Image Grid.Row="6" Grid.Column="0"  Source="FaceBook" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand" />
+         <Label Grid.Row="6" Grid.Column="1"  Text="Sign Up With Facebook&#10;"  FontSize="13" Font="Bold,13" TextColor="#16346a" />
+         <Label Grid.Row="7" Grid.Column="0"  Grid.ColumnSpan="3" Text="By Signing up, you agree to Blue Apron&apos;s" HorizontalOptions="CenterAndExpand" TextColor="Silver" FontSize="13" />
+         <Label Grid.Row="8" Grid.Column="0"  Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand">
+                   <Label.FormattedText>
+                        <FormattedString> 
+                           <Span Text="Terms of Service " FontSize="13" ForegroundColor="#16346a"/>
+                           <Span Text="and " Font="Bold,13" ForegroundColor="Silver"/>
+                           <Span Text="Privacy Policy" FontSize="13" ForegroundColor="#16346a"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                 </Label>
+         <Label Grid.Row="9" Grid.Column="0"  Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                   <Label.FormattedText>
+                        <FormattedString> 
+                           <Span Text="Already have an account? " Font="Bold,13" ForegroundColor="Silver"/>
+                           <Span Text="Log In" Font="Bold,13" ForegroundColor="#16346a"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                 </Label>   
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

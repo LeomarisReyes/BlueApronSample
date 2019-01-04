@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BlueApronSample.Views.PlanPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+  <ContentPage.Content>
+  <ScrollView> 
+   <StackLayout Orientation="Vertical" BackgroundColor="#f7f8fa" Padding="20"> 
+
+          <StackLayout Spacing="0" Padding="0,0,0,30">
+          <Image Source="Family2" HorizontalOptions="FillAndExpand" />    
+              <StackLayout BackgroundColor="White" HeightRequest="65" Orientation="Vertical"  HorizontalOptions="FillAndExpand" Padding="0">
+                     <Label Text="Two Person" Style="{StaticResource TitlePlanLabels}"/> 
+                     <Label HorizontalOptions="CenterAndExpand">
+                            <Label.FormattedText>
+                                 <FormattedString>
+                                    <Span Text="Server 2 as low " FontSize="13" />
+                                     <Span Text="$9.99 " ForegroundColor="#0cab7d" Font="Bold,13"  />
+                                     <Span Text="a serving" FontSize="13"/> 
+                                 </FormattedString>
+                            </Label.FormattedText> 
+                       </Label>
+                </StackLayout> 
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver"/>
+            </StackLayout>
+
+           <StackLayout Spacing="0"  Padding="0,0,0,30">
+           <Image Source="Family" HorizontalOptions="FillAndExpand"/>    
+               <StackLayout BackgroundColor="White" HeightRequest="65" Spacing="0" Orientation="Vertical"  HorizontalOptions="FillAndExpand" >
+                     <Label Text="Familiy" Style="{StaticResource TitlePlanLabels}"/> 
+                     <Label HorizontalOptions="CenterAndExpand">
+                            <Label.FormattedText>
+                                 <FormattedString>
+                                    <Span Text="Server 2 as low " FontSize="13" />
+                                     <Span Text="$7.49 " ForegroundColor="#0cab7d" Font="Bold,13"  />
+                                     <Span Text="a serving" FontSize="13"/> 
+                                 </FormattedString>
+                            </Label.FormattedText> 
+                       </Label>     
+                </StackLayout> 
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" />  
+            </StackLayout>
+                <Label Text="You can always change this later" FontSize="13" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>                                
+   </StackLayout>
+  </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

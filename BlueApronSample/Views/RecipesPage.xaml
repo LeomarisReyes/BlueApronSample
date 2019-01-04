@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BlueApronSample.Views.RecipesPage"
+             xmlns:local="clr-namespace:BlueApronSample" 
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+    <ContentPage.BindingContext>
+        <local:ViewModels.RecipesViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+           <StackLayout Padding="17,20,17,10">
+             <ListView ItemsSource = "{Binding Recipes}" 
+                       HasUnevenRows = "true"
+                       Footer        = "">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>   
+                            <StackLayout Orientation="Horizontal" Padding="0,10,0,10">  
+                                <Image   Source="{Binding Picture}" WidthRequest="90" HeightRequest="90" />
+                                <StackLayout Orientation="Vertical"> 
+                                      <Label   Text  ="{Binding Name}" Font="Bold,13" TextColor="#15326b"  Margin="10,16,0,0"/>
+                                      <Label   Text  ="{Binding Description}" FontSize="11" TextColor="Silver" Margin="10,6,0,0"/>
+                                </StackLayout> 
+                             </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+          </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
