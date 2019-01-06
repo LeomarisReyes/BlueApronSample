@@ -105,6 +105,12 @@
     <AndroidResource Include="Resources\drawable\Cartoon.png" />
     <AndroidResource Include="Resources\drawable\Food1.png" />
     <AndroidResource Include="Resources\drawable\TimerIcon.png" />
+    <AndroidResource Include="Resources\drawable\RecipesIcon.png" />
+    <AndroidResource Include="Resources\drawable\LearnMoreIcon.png" />
+    <AndroidResource Include="Resources\drawable\OnTheMenuIcon.png" />
+    <AndroidResource Include="Resources\drawable\ProfileIcon.png" />
+    <AndroidResource Include="Resources\drawable\Food3.png" />
+    <AndroidResource Include="Resources\drawable\Food4.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="BlueApronSample.Views.PrincipalPage">
+             x:Class="BlueApronSample.Views.PrincipalPage"
+             Title="Learn More"
+             Icon="LearnMoreIcon">
     <ContentPage.Content>
-        <StackLayout>
-        <Grid>
+    <AbsoluteLayout HorizontalOptions="CenterAndExpand">
+    <Grid BackgroundColor="White"  HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"  >
             <Grid.RowDefinitions>
                 <RowDefinition Height="350" />
                 <RowDefinition Height="Auto" />
@@ -23,7 +25,9 @@
             <Label Grid.Row="3" Text="To make food more sustainable and recipes more delicious." HorizontalOptions="CenterAndExpand" TextColor="Silver" FontSize="12"/>
             <Image Grid.Row="4" Source="Dinner2" Margin="0,30,0,0"/>
         </Grid> 
-
-      </StackLayout>
+          <Button Text="Log In"  AbsoluteLayout.LayoutBounds=".1,.9,150,50" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#0e235a" TextColor="White"  Font="Bold,15"/>  
+          
+        <Button Text="Get Started"  AbsoluteLayout.LayoutBounds=".86,.9,150,50" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#fc6933" TextColor="White"  Font="Bold,15"/>  
+        </AbsoluteLayout>  
     </ContentPage.Content>
 </ContentPage>

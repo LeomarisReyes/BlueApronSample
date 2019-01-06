@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BlueApronSample.Views.OnTheMenuPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             Title="On the Menu"
+             Icon="OnTheMenuIcon">
+    <ContentPage.Content>
+    <StackLayout Orientation="Vertical">
+            <Image Source="PrincipalIcon" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30"/>
+            <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="1" Color="#f4f4f4"/>
+            <StackLayout Padding="15,4,15,4" Orientation="Horizontal">
+                <Label x:Name="Date1" Text="Week of JUL 1" Style="{StaticResource CalendarLabels}" TextColor="#263266">
+                   <Label.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Tapped="Date1_Tapped"/>
+                       </Label.GestureRecognizers>
+                </Label>
+                <BoxView HorizontalOptions="FillAndExpand" WidthRequest="1" Color="#f4f4f4"/>
+                <Label x:Name="Date2" Text="Week of JUL 8" Style="{StaticResource CalendarLabels}">
+                       <Label.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Tapped="Date2_Tapped"/>
+                       </Label.GestureRecognizers>
+                </Label>
+                <BoxView HorizontalOptions="FillAndExpand" WidthRequest="1" Color="#f4f4f4"/>
+                <Label x:Name="Date3" Text="Week of JUL 15" Style="{StaticResource CalendarLabels}">
+                       <Label.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Tapped="Date3_Tapped"/>
+                       </Label.GestureRecognizers>
+                </Label>
+                <BoxView HorizontalOptions="FillAndExpand" WidthRequest="1" Color="#f4f4f4"/>
+                <Label x:Name="Date4" Text="Week of JUL 22" Style="{StaticResource CalendarLabels}">
+                       <Label.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Tapped="Date4_Tapped"/>
+                       </Label.GestureRecognizers>
+                </Label> 
+             </StackLayout>
+             <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="1" Color="#f4f4f4"/>
+             <Label Text="Week of JUL 1" FontSize="11" Margin="15,6,0,6" FontAttributes="Bold" TextColor="#263266" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+            
+       <AbsoluteLayout HorizontalOptions="CenterAndExpand">
+        <Grid BackgroundColor="White"  HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="350" />
+                    <RowDefinition Height="350" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                     <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="Food3" Grid.Row="0" HorizontalOptions="StartAndExpand"/>
+                <Image Source="Food4" Grid.Row="1"/>
+            </Grid> 
+            <Button Text="Get Started"  AbsoluteLayout.LayoutBounds=".5,.93,300,50" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#fc6933" TextColor="White"  Font="Bold,15"/>  
+        </AbsoluteLayout>  
+     </StackLayout>       
+    </ContentPage.Content>
+</ContentPage>

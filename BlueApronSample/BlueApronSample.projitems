@@ -50,6 +50,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TabPOrdenSummary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\OnTheMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -87,6 +95,12 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\MenuDetailPage.xaml.cs">
       <DependentUpon>MenuDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TabPOrdenSummary.xaml.cs">
+      <DependentUpon>TabPOrdenSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\OnTheMenuPage.xaml.cs">
+      <DependentUpon>OnTheMenuPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

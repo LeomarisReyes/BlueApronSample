@@ -4,26 +4,21 @@
              x:Class="BlueApronSample.Views.ProfilePage" 
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true"
-             Title="Profile">
+             Title="Profile"
+             Icon="ProfileIcon">
     
     <ContentPage.Content>
-     <ScrollView BackgroundColor="#f7f8fa"> 
-              <!--<StackLayout HeightRequest="150" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-                 <Image Source="Camera" HeightRequest="70" WidthRequest="70" />
-                 <Label Text="Start Snapping" Style="{StaticResource LabelStyle}" HorizontalOptions="CenterAndExpand"/> 
+     <ScrollView> 
+        <StackLayout Orientation="Vertical"> 
+              <StackLayout Padding="14,15,0,10" BackgroundColor="#f7f8fa">
+                  <Label Text="MY FOOD PICS" Font="12" BackgroundColor="#f7f8fa" TextColor="#97979c" HorizontalOptions="FillAndExpand"/>
+              </StackLayout>
+                 <Image Source="Camera" HeightRequest="70" WidthRequest="70" BackgroundColor="White" HorizontalOptions="FillAndExpand"/>
+                 <Label Text="Start Snapping" Margin="0,0,0,0" Style="{StaticResource LabelStyle}" HorizontalOptions="CenterAndExpand"/> 
                  <Label Text="Channel your inner food photographer" FontSize="13" HorizontalOptions="CenterAndExpand" TextColor="Silver"/> 
-             </StackLayout> -->
-            <TableView Intent="Menu">
+             
+           <TableView Intent="Menu">
                 <TableRoot>
-                     <TableSection Title="MY FOOD PICS">
-                       <ViewCell>  
-                        <StackLayout HeightRequest="150" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-                 <Image Source="Camera" HeightRequest="70" WidthRequest="70" />
-                 <Label Text="Start Snapping" Style="{StaticResource LabelStyle}" HorizontalOptions="CenterAndExpand"/> 
-                 <Label Text="Channel your inner food photographer" FontSize="13" HorizontalOptions="CenterAndExpand" TextColor="Silver"/> 
-             </StackLayout>
-                        </ViewCell>
-                    </TableSection>
                      <TableSection>
                         <ViewCell > 
                           <StackLayout Orientation="Horizontal">
@@ -78,6 +73,7 @@
                     </TableSection>
                 </TableRoot>
             </TableView>  
+          </StackLayout>   
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

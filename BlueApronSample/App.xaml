@@ -35,6 +35,15 @@
                 <Setter Property = "HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property = "TextColor"         Value="#274374" />
             </Style>
+
+             <Style x:Key="CalendarLabels" TargetType="Label">
+                <Setter Property = "FontSize"          Value="11" />
+                <Setter Property = "TextColor"         Value="#3d3d3d" />
+                <Setter Property = "HorizontalOptions" Value="Center" />
+                <Setter Property = "VerticalOptions"   Value="CenterAndExpand" />
+                <Setter Property = "HorizontalTextAlignment"   Value="Center" />
+            </Style>
+ 
        </ResourceDictionary>     
     </Application.Resources>
 </Application>

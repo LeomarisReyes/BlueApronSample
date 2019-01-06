@@ -11,7 +11,7 @@ namespace BlueApronSample
         {
             InitializeComponent();
 
-            MainPage = new Views.MenuDetailPage();
+            MainPage = new Views.TabPOrdenSummary();
         }
 
         protected override void OnStart()

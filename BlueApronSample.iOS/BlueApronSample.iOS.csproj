@@ -173,6 +173,13 @@
     <BundleResource Include="Resources\Cartoon.png" />
     <BundleResource Include="Resources\Food1.png" />
     <BundleResource Include="Resources\TimerIcon.png" />
+    <BundleResource Include="Resources\LearnMoreIcon.png" />
+    <BundleResource Include="Resources\OnTheMenuIcon.png" />
+    <BundleResource Include="Resources\ProfileIcon.png" />
+    <BundleResource Include="Resources\RecipesIcon.png" />
+    <BundleResource Include="Resources\Cam.png" />
+    <BundleResource Include="Resources\Food3.png" />
+    <BundleResource Include="Resources\Food4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\BlueApronSample\BlueApronSample.projitems" Label="Shared" />

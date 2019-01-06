@@ -29,6 +29,24 @@ namespace BlueApronSample.ViewModels
                     Name        = "Roast Pork & Vegetables",
                     Description = "Wuth Brasil Pesto & Marinated Tomatoes",
                     Picture     = "Recipes3"
+                },
+                new  Recipes
+                {
+                    Name        = "Cheesy Pesto Chicken Calzones",
+                    Description = "With Tomato Sauce & Marinated Zucchini",
+                    Picture     = "Recipes"
+                },
+                new  Recipes
+                {
+                    Name        = "Monterey Jack Cheseeburgues",
+                    Description = "Topped with Poblano & Tomato Salsa",
+                    Picture     = "Recipes2"
+                },
+                new  Recipes
+                {
+                    Name        = "Roast Pork & Vegetables",
+                    Description = "Wuth Brasil Pesto & Marinated Tomatoes",
+                    Picture     = "Recipes3"
                 }
             };
         }
