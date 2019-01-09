@@ -1,23 +1,44 @@
 ﻿using System.ComponentModel;
+using System.Threading.Tasks;
 using BlueApronSample.Models;
+using Prism.Commands;
+using Prism.Navigation;
 using Xamarin.Forms;
 
 namespace BlueApronSample.ViewModels
 {
     public class ServingViewModel : INotifyPropertyChanged
     {
+        INavigationService _navigationService; 
         public bool IsVisible { get; set; } = false;
-        public Command ChangeVisibiliyCommand { get; set; }
+        public DelegateCommand ChangeVisibiliyCommand { get; set; }
+        public DelegateCommand OpenDataDeliverCommand { get; set; }
+        public DelegateCommand CloseWindowsCommand { get; set; }
+      
 
-        public ServingViewModel()
+        public ServingViewModel(INavigationService navigationService)
         {
-            ChangeVisibiliyCommand = new Command(ChangeVisibiliy);
+            _navigationService = navigationService; 
+            ChangeVisibiliyCommand = new DelegateCommand(async () => await ChangeVisibiliy());
+            OpenDataDeliverCommand = new DelegateCommand(async () => await OpenDataDeliver());
+            CloseWindowsCommand = new DelegateCommand(async () => await CloseWindows());
         }
 
-        public void ChangeVisibiliy()
-        {
+        async Task ChangeVisibiliy()
+        { 
             IsVisible = !IsVisible;
         }
+
+        async Task OpenDataDeliver()
+        {
+            await _navigationService.NavigateAsync(NavigationConstants.DataDeliver);
+        }
+
+        async Task CloseWindows()
+        {
+            _navigationService.GoBackAsync();
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
     }
 }

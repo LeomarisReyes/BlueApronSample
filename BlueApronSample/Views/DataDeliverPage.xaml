@@ -2,11 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="BlueApronSample.Views.DataDeliverPage"
+             Title=" Where we should deliver"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true">
-  <StackLayout BackgroundColor="#f7f8fa" Padding="30"> 
-         <Label Text="&lt;      Where shoud we deliver?" Margin="0,0,0,15" HorizontalOptions="FillAndExpand" TextColor="#16346a" Font="Bold,15" />
-   <Grid>
+  <StackLayout BackgroundColor="#f7f8fa"> 
+      <StackLayout Orientation="Horizontal" BackgroundColor="#f7f8fa" Padding="15,15,10,5">
+                 <Image WidthRequest="30" HeightRequest="30" Source="Arrow2"  HorizontalOptions="Start" VerticalOptions="Start">
+                   <Image.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Command="{Binding CloseWindowsCommand}"/>
+                   </Image.GestureRecognizers>
+                  </Image>  
+                 <Label Text="Where shoud we deliver?" HorizontalTextAlignment="Center" TextColor="#16346a" HorizontalOptions="FillAndExpand" Font="Bold,16"  VerticalOptions="CenterAndExpand"/>
+       </StackLayout>
+   <Grid Padding="30">
      <Grid.RowDefinitions> 
          <RowDefinition Height="Auto" />
          <RowDefinition Height="Auto" />
@@ -58,8 +68,9 @@
 
         <Label Text="Special Instructions (Optional)" Grid.Row="10" Grid.Column="0"  Grid.ColumnSpan="2" Style="{StaticResource HeaderDataDeliver}"/>
         <Entry Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="e.g. Please leave with front office" />
+
   </Grid>
-        <Button Text="Continue"  BackgroundColor="#16346a" TextColor="White" VerticalOptions="EndAndExpand" Font="Bold,15"/>     
+       <Button Text="Continue"  Command="{Binding OpenDetailCommand}" BackgroundColor="#16346a" TextColor="White" VerticalOptions="EndAndExpand" Font="Bold,15" Margin="30,0,30,0"/>    
 
 </StackLayout>
 </ContentPage>

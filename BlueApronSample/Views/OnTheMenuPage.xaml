@@ -59,7 +59,7 @@
                 <Image Source="Food3" Grid.Row="0" HorizontalOptions="StartAndExpand"/>
                 <Image Source="Food4" Grid.Row="1"/>
             </Grid> 
-            <Button Text="Get Started"  AbsoluteLayout.LayoutBounds=".5,.93,300,50" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#fc6933" TextColor="White"  Font="Bold,15"/>  
+            <Button Text="Get Started" Command="{Binding OpenServingPageCommand}" AbsoluteLayout.LayoutBounds=".5,.93,300,50" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#fc6933" TextColor="White"  Font="Bold,15"/>  
         </AbsoluteLayout>  
      </StackLayout>       
     </ContentPage.Content>

@@ -5,12 +5,11 @@ using Xamarin.Forms;
 
 namespace BlueApronSample.Views
 {
-    public partial class MenuDetailPage : ContentPage
+    public partial class TabPGetStartedPage : TabbedPage
     {
-        public MenuDetailPage()
+        public TabPGetStartedPage()
         {
-            InitializeComponent(); 
-
+            InitializeComponent();
         }
     }
 }

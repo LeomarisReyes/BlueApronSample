@@ -23,11 +23,11 @@
             <Image Source="Cartoon"  Grid.Row="1" Margin="0,55,0,0"  HorizontalOptions="CenterAndExpand"/>
             <Label Grid.Row="2" Text="Our chefs and farmers work together" HorizontalOptions="CenterAndExpand" TextColor="#7880a2" FontSize="13"/>
             <Label Grid.Row="3" Text="To make food more sustainable and recipes more delicious." HorizontalOptions="CenterAndExpand" TextColor="Silver" FontSize="12"/>
-            <Image Grid.Row="4" Source="Dinner2" Margin="0,30,0,0"/>
-        </Grid> 
-          <Button Text="Log In"  AbsoluteLayout.LayoutBounds=".1,.9,150,50" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#0e235a" TextColor="White"  Font="Bold,15"/>  
-          
-        <Button Text="Get Started"  AbsoluteLayout.LayoutBounds=".86,.9,150,50" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#fc6933" TextColor="White"  Font="Bold,15"/>  
+            <Image Grid.Row="4" Source="Dinner2"/>
+            <Image Grid.Row="5" Source="Cartoon"/>
+           </Grid> 
+          <Button Text="Log In" Command="{Binding OpenLoginCommand}" AbsoluteLayout.LayoutBounds=".1,.9,150,50" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#0e235a" TextColor="White"  Font="Bold,15"/>  
+          <Button Text="Get Started" Command="{Binding OpenMenuCommand}" AbsoluteLayout.LayoutBounds=".86,.9,150,50" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#fc6933" TextColor="White"  Font="Bold,15"/>  
         </AbsoluteLayout>  
     </ContentPage.Content>
 </ContentPage>

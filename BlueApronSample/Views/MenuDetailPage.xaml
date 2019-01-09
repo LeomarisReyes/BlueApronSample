@@ -2,10 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="BlueApronSample.Views.MenuDetailPage"
+             Icon="PrincipalIcon"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true">
     <ContentPage.Content>
      <AbsoluteLayout HorizontalOptions="CenterAndExpand">
+       <StackLayout Orientation="Horizontal" BackgroundColor="#f7f8fa" Padding="10,15,10,5">
+                 <Image WidthRequest="30" HeightRequest="30" Source="Arrow2"  HorizontalOptions="Start" VerticalOptions="Start">
+                   <Image.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Command="{Binding CloseWindowsCommand}"/>
+                   </Image.GestureRecognizers>
+                  </Image>  
+                      </StackLayout>
          <Grid BackgroundColor="White"  HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"  >
          <Grid.RowDefinitions> 
              <RowDefinition Height="360" />
@@ -44,7 +54,7 @@
         </Grid>
 
 
-          <Button Text="Get Started"  AbsoluteLayout.LayoutBounds=".5,.9,300,40" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#fc6933" TextColor="White"  Font="Bold,15"/>  
+          <Button Text="Get Started" Command="{Binding OpenOrderSummaryCommand}"  AbsoluteLayout.LayoutBounds=".5,.9,300,40" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#fc6933" TextColor="White"  Font="Bold,15"/>  
         
 
        

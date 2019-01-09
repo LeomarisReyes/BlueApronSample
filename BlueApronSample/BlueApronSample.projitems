@@ -58,6 +58,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TabPGetStartedPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -102,11 +106,26 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\OnTheMenuPage.xaml.cs">
       <DependentUpon>OnTheMenuPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PrincipalPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LogInPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TabPGetStartedPage.xaml.cs">
+      <DependentUpon>TabPGetStartedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SignUpViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DataDeliverViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NavigationConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\OrderSummaryViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MenuDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\OnTheMenuViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PlanViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProfileViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\ExtendedListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Controls\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)FodyWeavers.xml" />

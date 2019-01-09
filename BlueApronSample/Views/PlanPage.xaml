@@ -6,10 +6,20 @@
              ios:Page.UseSafeArea="true">
   <ContentPage.Content>
   <ScrollView> 
-   <StackLayout Orientation="Vertical" BackgroundColor="#f7f8fa" Padding="20"> 
+   <StackLayout Orientation="Vertical" BackgroundColor="#f7f8fa"> 
 
-          <StackLayout Spacing="0" Padding="0,0,0,30">
-          <Image Source="Family2" HorizontalOptions="FillAndExpand" />    
+         <StackLayout Orientation="Horizontal" BackgroundColor="#f7f8fa" Padding="0,10,10,5">
+                 <Image WidthRequest="30" HeightRequest="30" Source="Close" Margin="15,0,0,0" HorizontalOptions="Start" VerticalOptions="Start">
+                   <Image.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Command="{Binding CloseWindowsCommand}"/>
+                   </Image.GestureRecognizers>
+                  </Image>  
+                 <Label Text="Lets personalizate you plan.&#10;Which one fits your lifestyle?" HorizontalTextAlignment="Center" TextColor="#16346a" HorizontalOptions="FillAndExpand" Font="Bold,15" Margin="0,2,0,10" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+          <StackLayout Spacing="0" Padding="20,0,20,30">
+          <Image Source="Family2" HorizontalOptions="FillAndExpand"/>    
               <StackLayout BackgroundColor="White" HeightRequest="65" Orientation="Vertical"  HorizontalOptions="FillAndExpand" Padding="0">
                      <Label Text="Two Person" Style="{StaticResource TitlePlanLabels}"/> 
                      <Label HorizontalOptions="CenterAndExpand">
@@ -25,7 +35,7 @@
             <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver"/>
             </StackLayout>
 
-           <StackLayout Spacing="0"  Padding="0,0,0,30">
+           <StackLayout Spacing="0"  Padding="20,0,20,30">
            <Image Source="Family" HorizontalOptions="FillAndExpand"/>    
                <StackLayout BackgroundColor="White" HeightRequest="65" Spacing="0" Orientation="Vertical"  HorizontalOptions="FillAndExpand" >
                      <Label Text="Familiy" Style="{StaticResource TitlePlanLabels}"/> 

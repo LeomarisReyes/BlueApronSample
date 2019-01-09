@@ -2,11 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="BlueApronSample.Views.OrderSummaryPage"
+             Title=" Orden Summary"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true">
     <ContentPage.Content>
-   <StackLayout Orientation="Vertical" Padding="8">
+   <StackLayout Orientation="Vertical">
 
+            <StackLayout Orientation="Horizontal" BackgroundColor="#f7f8fa" Padding="0,10,0,5">
+                 <Image WidthRequest="30" HeightRequest="30" Source="Close" Margin="15,0,0,0" HorizontalOptions="Start" VerticalOptions="Start">
+                   <Image.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Command="{Binding CloseWindowsCommand}"/>
+                   </Image.GestureRecognizers>
+                  </Image>  
+                 <Label Text="Order Summary" TextColor="#16346a" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
             <StackLayout Orientation="Horizontal"  VerticalOptions="Center" Padding="0,10,0,0">
                 <Image Source="Cap" WidthRequest="70" HeightRequest="70"/>
                  <Label>
@@ -17,7 +28,13 @@
                                 </FormattedString>
                             </Label.FormattedText>
                  </Label>  
-                  <Image WidthRequest="30" HeightRequest="30" Source="Arrow" HorizontalOptions="EndAndExpand"/>
+                  <Image WidthRequest="30" HeightRequest="30" Source="Arrow" HorizontalOptions="EndAndExpand">
+                     <Image.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Command="{Binding OpenPlansCommand}"/>
+                   </Image.GestureRecognizers>
+                  </Image>  
             </StackLayout>
              <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" VerticalOptions="Center"/>
 
@@ -59,8 +76,8 @@
              <Label  Grid.Row="4" Grid.Column="0"  FontSize="15" Grid.ColumnSpan="2" TextColor="#707673" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. " />
           </Grid> 
 
-            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
-               <Button Text="Continue"  HorizontalOptions="FillAndExpand" BackgroundColor="#16346a" TextColor="White"  Font="Bold,15"/>  
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Padding="10,0,10,0">
+               <Button Text="Continue" Command="{Binding OpenCompletedOrdersCommand}"  HorizontalOptions="FillAndExpand" BackgroundColor="#16346a" TextColor="White"  Font="Bold,15"/>  
                <Button Text="Pay" Image="AppleBtnIcon"  HorizontalOptions="FillAndExpand" BackgroundColor="Black" TextColor="White" Font="Bold,15"/>  
             </StackLayout>
             

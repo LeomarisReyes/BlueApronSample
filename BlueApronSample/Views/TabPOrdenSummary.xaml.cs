@@ -7,9 +7,9 @@ namespace BlueApronSample.Views
 {
     public partial class TabPOrdenSummary : TabbedPage
     {
-        public TabPOrdenSummary()
+         public TabPOrdenSummary()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
     }
-}
+} 

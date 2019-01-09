@@ -1,16 +1,28 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using BlueApronSample.Models;
+using Prism.Commands;
+using Prism.Navigation;
+using Xamarin.Forms;
 
 namespace BlueApronSample.ViewModels
 {
-    public class RecipesViewModel
+    public class RecipesViewModel : INotifyPropertyChanged
     {
+        INavigationService _navigationService; 
         public ObservableCollection<Recipes> Recipes { get; set; }
-        public string no { get; set; } = "Recipes";
-        public RecipesViewModel()
+
+        public event PropertyChangedEventHandler PropertyChanged;
+      
+        public DelegateCommand<Recipes> OnItemTappedCommand { get; set; }
+      
+        public RecipesViewModel(INavigationService navigationService)
         {
-            Recipes = new ObservableCollection<Recipes>
+            _navigationService = navigationService; 
+             Recipes = new ObservableCollection<Recipes>
             {
                 new  Recipes
                 {
@@ -49,6 +61,12 @@ namespace BlueApronSample.ViewModels
                     Picture     = "Recipes3"
                 }
             };
+
+            OnItemTappedCommand = new DelegateCommand<Recipes>(async(Recipes recipes) =>
+            {  
+                await _navigationService.NavigateAsync(NavigationConstants.MenuDetail);
+            });
+ 
         }
     }
 }

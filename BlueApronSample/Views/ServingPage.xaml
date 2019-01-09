@@ -5,13 +5,21 @@
              xmlns:local="clr-namespace:BlueApronSample" 
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true">
-    <ContentPage.BindingContext>
-        <local:ViewModels.ServingViewModel />
-    </ContentPage.BindingContext>
 
   <ContentPage.Content>
   <ScrollView>
   <StackLayout BackgroundColor="#f7f8fa" Padding="20,20,20,10"> 
+       <StackLayout Orientation="Horizontal" BackgroundColor="#f7f8fa" Padding="0,10,10,5">
+                 <Image WidthRequest="30" HeightRequest="30" Source="Arrow2"  HorizontalOptions="Start" VerticalOptions="Start">
+                   <Image.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Command="{Binding CloseWindowsCommand}"/>
+                   </Image.GestureRecognizers>
+                  </Image>  
+                 <Label Text="We plan to cook 4 times.&#10;each week" HorizontalTextAlignment="Center" TextColor="#16346a" HorizontalOptions="FillAndExpand" Font="Bold,15" Margin="0,2,0,10" VerticalOptions="CenterAndExpand"/>
+       </StackLayout>
+                
        <Image Source="Family" HorizontalOptions="FillAndExpand" WidthRequest="650"/>    
 
          <Grid BackgroundColor="White" Padding="10,10,20,0">
@@ -82,7 +90,7 @@
                  <BoxView Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver"/>
                
                 </Grid>  
-                  <Grid IsVisible="{Binding IsVisible}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                  <Grid  x:Name="PriceList" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -103,9 +111,10 @@
              <Label Text="FREE"  Grid.Row="2" Grid.Column="1" Style="{StaticResource AmountsLabels}"  />
              <Label Text="First Week Total" Grid.Row="3" Grid.Column="0" Style="{StaticResource SilverLabels}"  />   
              <Label Text="$119.84"  Grid.Row="3" Grid.Column="1" Style="{StaticResource AmountsLabels}" />
-             <Button Text="Continue"  Grid.Row="4" Grid.Column="0"  Grid.ColumnSpan="2" BackgroundColor="#16346a" TextColor="White" VerticalOptions="EndAndExpand" Font="Bold,15"/>  
+             <Button Text="Continue"  Grid.Row="4" Grid.Column="0"  Grid.ColumnSpan="2" Command="{Binding OpenDataDeliverCommand}" BackgroundColor="#16346a" TextColor="White" VerticalOptions="EndAndExpand" Font="Bold,15"/>  
            </Grid> 
-                    
+<!--                 <Button Text="Continue"  Command="{Binding OpenDataDeliverCommand}" BackgroundColor="#16346a" TextColor="White" VerticalOptions="EndAndExpand" Font="Bold,15"/>  -->
+                 
   </StackLayout>
   </ScrollView>
 </ContentPage.Content>
