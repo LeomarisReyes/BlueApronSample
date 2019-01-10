@@ -8,7 +8,17 @@
              Icon="OnTheMenuIcon">
     <ContentPage.Content>
     <StackLayout Orientation="Vertical">
-            <Image Source="PrincipalIcon" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30"/>
+          <StackLayout Orientation="Horizontal" Padding="10,0,0,0">
+                 <Image WidthRequest="30" HeightRequest="30" Source="Arrow2"  HorizontalOptions="Start" VerticalOptions="Start">
+                   <Image.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Command="{Binding CloseWindowsCommand}"/>
+                   </Image.GestureRecognizers>
+                  </Image>  
+                 <Image Source="PrincipalIcon" HorizontalOptions="CenterAndExpand" Margin="0,0,40,0" WidthRequest="30" HeightRequest="30" />
+         </StackLayout>
+
             <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="1" Color="#f4f4f4"/>
             <StackLayout Padding="15,4,15,4" Orientation="Horizontal">
                 <Label x:Name="Date1" Text="Week of JUL 1" Style="{StaticResource CalendarLabels}" TextColor="#263266">

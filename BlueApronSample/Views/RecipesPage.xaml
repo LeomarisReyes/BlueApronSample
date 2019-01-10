@@ -9,8 +9,12 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true">
     <ContentPage.Content>
-           <StackLayout Padding="17,20,17,10"> 
+           <StackLayout Padding="5,10,5,10"> 
+            <StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="0,15,0,0">
+                <Label Text="All Recipes" TextColor="#16346a" Font="Bold,15" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
             <controls:ExtendedListView ItemsSource="{Binding Recipes}" 
+                       Margin="5,0,17,5"               
                        HasUnevenRows="true"
                        TappedCommand="{Binding OnItemTappedCommand}"
                        Footer="">

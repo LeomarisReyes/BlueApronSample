@@ -90,7 +90,7 @@
                  <BoxView Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver"/>
                
                 </Grid>  
-                  <Grid  x:Name="PriceList" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                  <Grid x:Name="PriceList" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -112,9 +112,7 @@
              <Label Text="First Week Total" Grid.Row="3" Grid.Column="0" Style="{StaticResource SilverLabels}"  />   
              <Label Text="$119.84"  Grid.Row="3" Grid.Column="1" Style="{StaticResource AmountsLabels}" />
              <Button Text="Continue"  Grid.Row="4" Grid.Column="0"  Grid.ColumnSpan="2" Command="{Binding OpenDataDeliverCommand}" BackgroundColor="#16346a" TextColor="White" VerticalOptions="EndAndExpand" Font="Bold,15"/>  
-           </Grid> 
-<!--                 <Button Text="Continue"  Command="{Binding OpenDataDeliverCommand}" BackgroundColor="#16346a" TextColor="White" VerticalOptions="EndAndExpand" Font="Bold,15"/>  -->
-                 
+           </Grid>  
   </StackLayout>
   </ScrollView>
 </ContentPage.Content>

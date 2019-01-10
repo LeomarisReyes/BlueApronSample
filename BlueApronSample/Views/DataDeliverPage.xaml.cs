@@ -10,8 +10,7 @@ namespace BlueApronSample.Views
         public DataDeliverPage()
         {
             InitializeComponent(); 
-            NavigationPage.SetHasNavigationBar(this, false);
-          //  NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasNavigationBar(this, false); 
         }
     }
 }

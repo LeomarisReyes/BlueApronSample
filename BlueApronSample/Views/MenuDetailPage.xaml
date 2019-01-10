@@ -7,7 +7,7 @@
              ios:Page.UseSafeArea="true">
     <ContentPage.Content>
      <AbsoluteLayout HorizontalOptions="CenterAndExpand">
-       <StackLayout Orientation="Horizontal" BackgroundColor="#f7f8fa" Padding="10,15,10,5">
+       <!--  <StackLayout Orientation="Horizontal" Padding="10,0,0,0">
                  <Image WidthRequest="30" HeightRequest="30" Source="Arrow2"  HorizontalOptions="Start" VerticalOptions="Start">
                    <Image.GestureRecognizers>
                            <TapGestureRecognizer
@@ -15,9 +15,12 @@
                             Command="{Binding CloseWindowsCommand}"/>
                    </Image.GestureRecognizers>
                   </Image>  
-                      </StackLayout>
+                 <Image Source="PrincipalIcon" HorizontalOptions="CenterAndExpand" Margin="0,0,40,0" WidthRequest="30" HeightRequest="30" />
+         </StackLayout>-->
+            
          <Grid BackgroundColor="White"  HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"  >
          <Grid.RowDefinitions> 
+             <RowDefinition Height="Auto" />
              <RowDefinition Height="360" />
              <RowDefinition Height="Auto" />
              <RowDefinition Height="Auto" />
@@ -33,28 +36,36 @@
               <ColumnDefinition Width="Auto" /> 
               <ColumnDefinition Width="*" /> 
          </Grid.ColumnDefinitions>
-            
-        <Image Source="Food1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="StartAndExpand" HorizontalOptions="Fill"/>
-        <Image Source="TimerIcon" Grid.Row="1" Grid.Column="0" Margin="15,0,0,0" />
-        <Label Text="TIME" Grid.Row="1" Grid.Column="1" />
-        <Label Text="35-35 Min" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"  Margin="15,0,15,0"  HorizontalOptions="EndAndExpand"/> 
-        <BoxView Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" Margin="15,10,0,0"/>
 
-        <Image Source="TimerIcon" Grid.Row="3" Grid.Column="0" Margin="15,0,0,0" />
-        <Label Text="SERVING" Grid.Row="3" Grid.Column="1" Margin="0,10,0,0"/>
-        <Label Text="4" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Margin="15,10,15,0" HorizontalOptions="EndAndExpand"/> 
-        <BoxView Grid.Row="4" Grid.Column="0"  Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" Margin="15,10,0,0"/>
+        <Image Grid.Row="0" Grid.Column="0" WidthRequest="30" HeightRequest="30" Source="Arrow2"  HorizontalOptions="Start" VerticalOptions="Start">
+                   <Image.GestureRecognizers>
+                           <TapGestureRecognizer
+                            NumberOfTapsRequired="1"  
+                            Command="{Binding CloseWindowsCommand}"/>
+                   </Image.GestureRecognizers>
+        </Image>  
+        <Image Source="PrincipalIcon" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand" Margin="0,0,40,0" WidthRequest="30" HeightRequest="30" />
+              
+        <Image Source="Food1"     Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="StartAndExpand" HorizontalOptions="Fill"/>
+        <Image Source="TimerIcon" Grid.Row="2" Grid.Column="0" Margin="15,0,0,0" />
+        <Label Text="TIME"        Grid.Row="2" Grid.Column="1" />
+        <Label Text="35-35 Min"   Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"  Margin="15,0,15,0"  HorizontalOptions="EndAndExpand"/> 
+        <BoxView                  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" Margin="15,10,0,0"/>
 
-        <Image Source="TimerIcon" Grid.Row="5" Grid.Column="0" Margin="15,0,0,0" />
-        <Label Text="CALORIES" Grid.Row="5" Grid.Column="1" Margin="0,10,0,0"/>
-        <Label Text="640 per serving" Grid.Row="5" Grid.Column="2" Margin="80,10,0,0" HorizontalOptions="EndAndExpand" /> 
-        <Image Source="TimerIcon" Grid.Row="5" Grid.Column="3" />
-        <BoxView Grid.Row="6" Grid.Column="0"  Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" VerticalOptions="Fill" Margin="15,10,0,0"/>
-        <Label  Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" Margin="15,0,15,0" FontSize="15"  Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat." />
+        <Image Source="TimerIcon" Grid.Row="4" Grid.Column="0" Margin="15,0,0,0" />
+        <Label Text="SERVING"     Grid.Row="4" Grid.Column="1" Margin="0,10,0,0"/>
+        <Label Text="4"           Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Margin="15,10,15,0" HorizontalOptions="EndAndExpand"/> 
+        <BoxView                  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" Margin="15,10,0,0"/>
+
+        <Image Source="TimerIcon" Grid.Row="6" Grid.Column="0" Margin="15,0,0,0" />
+        <Label Text="CALORIES"    Grid.Row="6" Grid.Column="1" Margin="0,10,0,0"/>
+        <Label Text="640 per serving" Grid.Row="6" Grid.Column="2" Margin="80,10,0,0" HorizontalOptions="EndAndExpand" /> 
+        <Image Source="TimerIcon" Grid.Row="6" Grid.Column="3" />
+        <BoxView                  Grid.Row="7" Grid.Column="0"  Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" VerticalOptions="Fill" Margin="15,10,0,0"/>
+        <Label                    Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4" Margin="15,0,15,0" FontSize="15"  Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat." />
         </Grid>
 
-
-          <Button Text="Get Started" Command="{Binding OpenOrderSummaryCommand}"  AbsoluteLayout.LayoutBounds=".5,.9,300,40" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#fc6933" TextColor="White"  Font="Bold,15"/>  
+        <Button Text="Get Started" Command="{Binding OpenOrderSummaryCommand}"  AbsoluteLayout.LayoutBounds=".5,.9,300,40" AbsoluteLayout.LayoutFlags="PositionProportional"  BackgroundColor="#fc6933" TextColor="White"  Font="Bold,15"/>  
         
 
        

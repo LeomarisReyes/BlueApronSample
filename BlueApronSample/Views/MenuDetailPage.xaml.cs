@@ -9,8 +9,8 @@ namespace BlueApronSample.Views
     {
         public MenuDetailPage()
         {
-            InitializeComponent(); 
-
+            InitializeComponent();  
+            // NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }
