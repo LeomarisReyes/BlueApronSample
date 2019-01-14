@@ -25,7 +25,7 @@ namespace BlueApronSample.ViewModels
 
         async Task CloseWindows()
         {
-            _navigationService.GoBackAsync();
+            await _navigationService.GoBackAsync();
         }
 
     }

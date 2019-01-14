@@ -19,16 +19,10 @@ namespace BlueApronSample.ViewModels
         public ServingViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService; 
-            ChangeVisibiliyCommand = new DelegateCommand(async () => await ChangeVisibiliy());
             OpenDataDeliverCommand = new DelegateCommand(async () => await OpenDataDeliver());
             CloseWindowsCommand = new DelegateCommand(async () => await CloseWindows());
         }
-
-        async Task ChangeVisibiliy()
-        { 
-            IsVisible = !IsVisible;
-        }
-
+         
         async Task OpenDataDeliver()
         {
             await _navigationService.NavigateAsync(NavigationConstants.DataDeliver);
@@ -36,7 +30,7 @@ namespace BlueApronSample.ViewModels
 
         async Task CloseWindows()
         {
-            _navigationService.GoBackAsync();
+            await _navigationService.GoBackAsync();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
